@@ -18,8 +18,8 @@ class Bass < Formula
     end
 
     system "make"
-    system "make install"
-    # bin.install 'bass'
+    # system "make install"
+    bin.install 'bass'
   end
 end
 
