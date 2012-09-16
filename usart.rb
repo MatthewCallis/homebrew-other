@@ -11,7 +11,7 @@ class Usart < Formula
       s.gsub! "gcc-mp-4.7", "gcc-4.7"
     end
 
-    system "./build.sh"
+    system "make"
     bin.install 'usart'
   end
 end
