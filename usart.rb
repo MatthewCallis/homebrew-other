@@ -11,6 +11,10 @@ class Usart < Formula
       s.gsub! "gcc-mp-4.7", "gcc-4.7"
     end
 
+    inreplace 'nall/emulation/super-famicom-usart.hpp' do |s|
+      s.gsub! "", "/dev/cu.usbmodem12341"
+    end
+
     system "make"
     bin.install 'usart'
   end
