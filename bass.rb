@@ -21,8 +21,8 @@ end
 __END__
 diff --git a/src/nall/Makefile b/src/nall/Makefile
 index bbc4b02..a9913c8 100755
---- a/byuu/Makefile
-+++ b/byuu/Makefile
+--- a/src/nall/Makefile
++++ b/src/nall/Makefile
 @@ -38,7 +38,7 @@ ifeq ($(compiler),)
    ifeq ($(platform),win)
      compiler := gcc
