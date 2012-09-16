@@ -12,7 +12,7 @@ class Usart < Formula
     end
 
     inreplace 'nall/emulation/super-famicom-usart.hpp' do |s|
-      s.gsub! "", "/dev/cu.usbmodem12341"
+      s.gsub! "/dev/ttyACM0", "/dev/cu.usbmodem12341"
     end
 
     system "make"
