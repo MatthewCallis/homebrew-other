@@ -13,3 +13,9 @@ brew install gcc
 
 brew tap MatthewCallis/homebrew-other
 ```
+
+## Remove / Uninstall
+
+```shell
+brew untap MatthewCallis/homebrew-other
+```
