@@ -9,7 +9,7 @@ class Bass < Formula
 
   # Point to the correct GCC, not MacPorts.
   def patches
-    DATA
+    # DATA
   end
 
   def install
@@ -19,10 +19,10 @@ class Bass < Formula
 end
 
 __END__
-diff --git a/bass/nall/Makefile b/bass/nall/Makefile
+diff --git a/nall/Makefile b/nall/Makefile
 index bbc4b02..a9913c8 100755
---- a/bass/nall/Makefile
-+++ b/bass/nall/Makefile
+--- a/nall/Makefile
++++ b/nall/Makefile
 @@ -38,7 +38,7 @@ ifeq ($(compiler),)
    ifeq ($(platform),win)
      compiler := gcc
