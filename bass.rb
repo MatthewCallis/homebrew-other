@@ -8,27 +8,32 @@ class Bass < Formula
   depends_on 'gcc' # 4.7+
 
   # Point to the correct GCC, not MacPorts.
-  def patches
-    # DATA
-  end
+  # def patches
+  #   DATA
+  # end
 
   def install
+    inreplace 'nall/Makefile' do |s|
+      s.gsub! "gcc-mp-4.7", "gcc-4.7"
+    end
+
     system "make"
     system "make install"
+    # bin.install 'bass'
   end
 end
 
-__END__
-diff --git a/nall/Makefile b/nall/Makefile
-index bbc4b02..a9913c8 100755
---- a/nall/Makefile
-+++ b/nall/Makefile
-@@ -38,7 +38,7 @@ ifeq ($(compiler),)
-   ifeq ($(platform),win)
-     compiler := gcc
-   else ifeq ($(platform),osx)
--    compiler := gcc-mp-4.7
-+    compiler := gcc-4.7
-   else
-     compiler := gcc-4.7
-   endif
+# __END__
+# diff --git a/nall/Makefile b/nall/Makefile
+# index bbc4b02..a9913c8 100755
+# --- a/nall/Makefile
+# +++ b/nall/Makefile
+# @@ -38,7 +38,7 @@ ifeq ($(compiler),)
+#    ifeq ($(platform),win)
+#      compiler := gcc
+#    else ifeq ($(platform),osx)
+# -    compiler := gcc-mp-4.7
+# +    compiler := gcc-4.7
+#    else
+#      compiler := gcc-4.7
+#    endif
