@@ -13,14 +13,13 @@ class Bass < Formula
   end
 
   def install
-    # system "./configure", "--prefix=#{prefix}", "--disable-debug", "--disable-dependency-tracking"
     system "make"
     system "make install"
   end
 end
 
 __END__
-diff --git a/nall/Makefile b/nall/Makefile
+diff --git a/bass/nall/Makefile b/bass/nall/Makefile
 index bbc4b02..a9913c8 100755
 --- a/byuu/Makefile
 +++ b/byuu/Makefile
