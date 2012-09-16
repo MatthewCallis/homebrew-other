@@ -1,6 +1,6 @@
 require 'formula'
 
-class Bass < Formula
+class Usart < Formula
   homepage 'http://byuu.org/programming/'
   head 'https://github.com/MatthewCallis/usart.git'
 
