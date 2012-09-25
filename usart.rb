@@ -4,7 +4,7 @@ class Usart < Formula
   homepage 'http://byuu.org/programming/'
   head 'https://github.com/MatthewCallis/usart.git'
 
-  depends_on 'gcc' # 4.7+
+  depends_on 'homebrew/dupes/gcc' # 4.7+
 
   def install
     inreplace 'nall/Makefile' do |s|

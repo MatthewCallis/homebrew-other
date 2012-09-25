@@ -5,7 +5,7 @@ class Bass < Formula
   homepage 'http://byuu.org/programming/'
   sha1 '120844fcd373f1b59bc817e1b1e41ae1d48824d6'
 
-  depends_on 'gcc' # 4.7+
+  depends_on 'homebrew/dupes/gcc' # 4.7+
 
   # Point to the correct GCC, not MacPorts.
   # def patches
